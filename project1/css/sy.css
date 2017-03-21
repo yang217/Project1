@@ -1,0 +1,923 @@
+/*------轮播图------------*/
+.lun{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	
+	overflow: hidden;
+
+}
+.lun .lunbo{
+	height: 400px;
+	width: 100%;
+	position: absolute;
+	top: 100;
+	z-index:-1;
+}
+.lunbo img{
+	width: 100%;
+	height: 400px;
+}
+.lunbo img{
+	display: none;
+}
+.lunbo img.active{
+	display: block;
+}
+.lun ul{
+	position: absolute;
+	right: 200px;
+	bottom:30px ;
+	z-index:3 ;
+}
+.lun ul li{
+	float: left;
+	color: #000000;
+	border-radius:10px ;
+	margin-right:15px ;
+	width: 20px;
+	text-align: center;
+	border: 1px #000000 solid;
+	background: #C7C7C7;
+}
+.lun ul li.active{
+	background:#02A3F0 ;
+}
+/* --notice----*/
+.notice{
+	height: 30px;
+	width: 1200px;
+	background: url(../image/notice.png) no-repeat 40px center;
+	margin:0 320px;
+}
+.notice p{
+	font: 14px/30px '';
+	margin-left:70px ;
+
+}
+/*  提醒底下的部分---*/
+.noticeb{
+	height: 190px;
+	width: 1200px;
+	margin:0 355px;
+}
+.noticeb img{
+	display: inline-block;
+}
+/*----------限时抢购-------------*/
+.xsq{
+	height: 500px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top:30px ;
+}
+.xsq .til{
+	font: 26px/50px "微软雅黑";
+	color: #ff0038;
+	border-bottom: 2px #FD1D5B solid;
+	margin-bottom: 10px;
+}
+.xsq .til i{
+	color: #c7c7c7;
+}
+.xsq .xsq_l{
+	width: 290px;
+	float: left;
+	height:450px;
+	border: 1px #C7C7C7 solid;
+	margin-right:5px ;
+}
+.xsq .xsq_l .djs{
+	height: 40px;
+	background:#f8f7f5 ;
+	background-image: url(../image/nz.png);
+	background-repeat: no-repeat;
+	background-position: 20px center ;
+	color: red;
+	width: 290px;
+	font: bold 18px/40px "";
+	text-align: right;
+}
+.xsq dl{
+	text-align: center;
+	color: #000000;
+}
+.xsq dl p{
+	width: 290px;
+	height: 55px;
+	background: #fd1d5b;
+	text-align:left
+	
+	
+}
+.xsq dl p i{
+    color:white;
+	font: 26px/55px "微软雅黑";
+	
+}
+.xsq dl p a{
+	margin-left: 50px;
+	background:#ffd10d ;
+	font: 26px/55px "微软雅黑";
+	color: #000000;
+	
+}
+.xsq dl .gm{
+	text-align: right;
+	font: 12px/1.5 "";
+	
+}
+
+.xsq dl .gm span{
+	color: #FD1D5B;
+}
+/*---------tab部分----------------*/
+.tab{
+	width: 1190px;
+	height: 460px;
+	margin: 0 auto;
+	margin-top:20px ;
+	position: relative;
+}
+.tab ul{
+	height: 35px;
+	background: #f7f7f7;
+	border-bottom: 1px #d0d0d0 solid;
+	margin-bottom:2px ;
+	margin-top:15px;
+	
+}
+.tab ul li{
+	font: bold 28px/35px "";
+	color: #000000;
+	float: left;
+	width: 220px;
+	text-align: center;
+	background: url(../image/tabboder.png) no-repeat right center;
+	
+}
+.tab ul li.active{
+	border-bottom:2px #02A3F0 solid ;
+}
+.tab .list{
+	
+	height: 440px;
+	position: absolute;
+}
+.tab .list .item2{
+	display: none;
+}
+.tab .list .item2 img{
+	width: 228px;
+	height: 260px;
+}
+.tab .list .item2.active{
+	display: block;
+}
+.tab .list dl{
+	width: 230px;
+	height: 440px;
+	float: left;
+	margin-right:5px ;
+}
+.tab .list dl dd p{
+	margin:20px 0;
+}
+.tab .list dl dd .span2{
+	color: red;
+	font: 26px/1.5 "";
+}
+.tab .list dl dd .span2 i{
+	font: 12px/1.5 "";
+}
+/*品牌活动部分*/
+.pphd{
+	height: 345px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top:20px ;
+}
+.pphd .pphd_t{
+	height: 40px;
+	border-bottom: 2px  #D0D0D0 solid;
+	margin-bottom:10px ;
+}
+ .til_l{
+ 	height: 30px;
+	font:bold 24px/40px "";;
+	color:#000000;
+	float: left;
+}
+.til_r{
+	height: 40px;
+	float: right;
+}
+.til_r a{
+	margin-left: 15px;
+	line-height:40px ;
+	
+}
+.pphd ul{
+	font-size: 0;
+	height: 300px;
+}
+.pphd ul a{
+	margin: 1px;
+}
+/*------护肤----------*/
+.hf{
+	height: 530px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.hf .hf_t{
+	height: 40px;
+	border-bottom: 2px #02A3F0 solid;
+	margin-bottom:10px ;
+}
+.blue{
+	color: #02A3F0;
+}
+.hf .hf_m{
+	height: 480px;
+}
+.hf_ml{
+	width: 265px;
+	float: left;
+}
+.hf_mm{
+	width: 700px;
+	float: left;
+}
+.hf_mm .dl_t{
+	border: 1px #D0D0D0 solid;
+	width: 315px;
+	height: 200px;
+	float: left;
+}
+.hf_mm .dl_t dt{
+	float: left;
+}
+.hf_mm  a{
+	margin: 10px 0;
+	display: block;
+}
+.hf_mm  .p1{
+	margin: 5px 0;
+	font: bold 24px/1.5 "";
+	color: red;
+}
+.hf_mm  i{
+	font: 12px/1.5 "";
+}
+.hf_mm .dl_b{
+	float: left;
+	width: 209px;
+	height: 275px;
+	border: 1px #D0D0D0 solid;
+}
+.hf_mm .dl_b img{
+	width: 200px;
+	height: 130px;
+}
+
+
+.hf_mr{
+	width: 220px;
+    float: right;
+   
+    height: 100%;
+}
+.hf_mr p{
+	font: bold 20px/45px "微软雅黑";
+	height: 45px;
+	text-align: center;
+	color: red;
+}
+.hf_mr ul li{
+	height: 40px;
+	border-bottom:1px #C7C7C7 solid ;
+	position:relative;
+	overflow: hidden;
+}
+/*.hf_mr li:hover{
+height: 280px;
+}*/
+.hf_mr li.active{
+	height: 270px;
+}
+/*.hf_mr li:hover dl{
+	top: 0;
+}*/
+.hf_mr ul li i{
+	border-radius: 15px;
+	border: 1px #FD1D5B  solid;
+	width: 20px;
+	color: #FD1D5B;
+	margin-right:15px ;
+}
+.hf_mr ul li a{
+	line-height: 40px;
+}
+.hf_mr ul li dl{
+	height: 160px;
+	position: absolute;
+}
+.hf_mr ul li dl img{
+	width:215px;
+	height: 130px;
+}
+.hf_mr ul li dl dd{
+	text-align: center;
+}
+/*----------护肤下面品牌栏那一行-------*/
+.hf_b{
+	width: 1190px;
+	height:42px;
+	margin: auto;
+
+	margin-top:5px ;
+	border-bottom:1px #D0D0D0 solid ;
+	border-top:1px #D0D0D0 solid ;
+}
+.hf_b a{
+	display: block;
+	float: left;
+	margin: 0 21px;
+}
+/*-----------彩妆部分---------------*/
+
+.cz{
+	height: 530px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.cz .cz_t{
+	height: 40px;
+	border-bottom: 2px #02A3F0 solid;
+	margin-bottom:10px ;
+}
+.blue{
+	color: #02A3F0;
+}
+.cz .cz_m{
+	height: 480px;
+}
+.cz_ml{
+	width: 265px;
+	float: left;
+}
+.cz_mm{
+	width: 700px;
+	float: left;
+}
+.cz_mm .dl_t{
+	border: 1px #D0D0D0 solid;
+	width: 315px;
+	height: 200px;
+	float: left;
+}
+.cz_mm .dl_t dt{
+	float: left;
+}
+.cz_mm  a{
+	margin: 10px 0;
+	display: block;
+}
+.cz_mm  .p1{
+	margin: 5px 0;
+	font: bold 24px/1.5 "";
+	color: red;
+}
+.cz_mm  i{
+	font: 12px/1.5 "";
+}
+.cz_mm .dl_b{
+	float: left;
+	width: 209px;
+	height: 275px;
+	border: 1px #D0D0D0 solid;
+}
+.cz_mm .dl_b img{
+	width: 200px;
+	height: 130px;
+}
+
+
+.cz_mr{
+	width: 220px;
+    float: right;
+   
+    height: 100%;
+}
+.cz_mr p{
+	font: bold 20px/45px "微软雅黑";
+	height: 45px;
+	text-align: center;
+	color: red;
+}
+.cz_mr ul li{
+	height: 40px;
+	border-bottom:1px #C7C7C7 solid ;
+	position:relative;
+	overflow: hidden;
+}
+/*.cz_mr li:hover{
+height: 280px;
+}*/
+.cz_mr li.active{
+	height: 270px;
+}
+/*.cz_mr li:hover dl{
+	top: 0;
+}*/
+.cz_mr ul li i{
+	border-radius: 15px;
+	border: 1px #FD1D5B  solid;
+	width: 20px;
+	color: #FD1D5B;
+	margin-right:15px ;
+}
+.cz_mr ul li a{
+	line-height: 40px;
+}
+.cz_mr ul li dl{
+	height: 160px;
+	position: absolute;
+}
+.cz_mr ul li dl img{
+	width:215px;
+	height: 130px;
+}
+.cz_mr ul li dl dd{
+	text-align: center;
+}
+/*----------彩妆下面品牌栏那一行-------*/
+.cz_b{
+	width: 1190px;
+	height:40px;
+	margin: auto;
+	margin-top:8px ;
+	border-bottom:1px #D0D0D0 solid ;
+	border-top:1px #D0D0D0 solid ;
+}
+.cz_b a{
+	display: block;
+	float: left;
+	margin: 0 21px;
+}
+/*--------香水部分--------------------------*/
+.xs{
+	height: 530px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top: 30px;
+	
+}
+.xs .xs_t{
+	height: 40px;
+	border-bottom: 2px #02A3F0 solid;
+	margin-bottom:10px ;
+}
+.blue{
+	color: #02A3F0;
+}
+.xs .xs_m{
+	height: 472px;
+}
+.xs_ml{
+	width: 265px;
+	float: left;
+}
+.xs_ml img{
+	width: 265px;;
+	height: 472px;
+}
+.xs_mm{
+	width: 630px;
+	float: left;
+	height: 472px;
+	
+}
+.xs_mmt{
+	width: 360px;
+	height: 472px;
+	float: left;
+	font-size: 0;
+}
+.xs_mmt a{
+	float: left;
+}
+.xs_mm_r{
+	width: 275px;
+	height: 472px;
+	float: left;
+	border: 1px #000000 solid;
+}
+
+.xs_mr{
+	width: 220px;
+    float: right;
+   
+    height: 100%;
+}
+.xs_mr p{
+	font: bold 20px/45px "微软雅黑";
+	height: 45px;
+	text-align: center;
+	color: red;
+}
+.xs_mr ul li{
+	height: 40px;
+	border-bottom:1px #C7C7C7 solid ;
+	position:relative;
+	overflow: hidden;
+}
+/*.xs_mr li:hover{
+height: 280px;
+}*/
+.xs_mr li.active{
+	height: 270px;
+}
+/*.xs_mr li:hover dl{
+	top: 0;
+}*/
+.xs_mr ul li i{
+	border-radius: 15px;
+	border: 1px #FD1D5B  solid;
+	width: 20px;
+	color: #FD1D5B;
+	margin-right:15px ;
+}
+.xs_mr ul li a{
+	line-height: 40px;
+}
+.xs_mr ul li dl{
+	height: 160px;
+	position: absolute;
+}
+.xs_mr ul li dl img{
+	width:215px;
+	height: 130px;
+}
+.xs_mr ul li dl dd{
+	text-align: center;
+}
+/*----------彩妆下面品牌栏那一行-------*/
+.xs_b{
+	width: 1190px;
+	height:40px;
+	margin: auto;
+	margin-top:10px ;
+	border-bottom:1px #D0D0D0 solid ;
+	border-top:1px #D0D0D0 solid ;
+}
+.xs_b a{
+	display: block;
+	float: left;
+	margin: 0 21px;
+}
+/*--------------男士部分----------------------*/
+.ns{
+	height: 550px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top: 30px;
+	
+}
+.ns .ns_t{
+	height: 40px;
+	border-bottom: 2px #02A3F0 solid;
+	margin-bottom:10px ;
+}
+.blue{
+	color: #02A3F0;
+}
+.ns .ns_m{
+	height: 490px;
+}
+.ns_mml{
+	width: 612px;
+	float: left;
+   height: 490px;
+
+}
+.ns_mml dl{
+	width: 200px;
+	height: 250px;
+	border: 1px #D0D0D0 solid;
+	float: left;
+	text-align: center;
+}
+.ns_mml dl p{
+	font: 16px/1.5 "微软雅黑";
+	color: red;
+}
+.ns_mml dl i{
+	font: 12px/1.5 "";
+}
+.ns_mmr{
+	width: 310px;
+	height: 490px;
+	float:left;
+	 border: 1px #000000 solid;
+}
+.ns_mmr img{
+	width: 310px;
+	height: 490px;
+}
+
+.ns_mr{
+	width: 220px;
+    float: right;
+  
+    height: 100%;
+}
+.ns_mr p{
+	font: bold 20px/45px "微软雅黑";
+	height: 45px;
+	text-align: center;
+	color: red;
+}
+.ns_mr ul li{
+	height: 40px;
+	border-bottom:1px #C7C7C7 solid ;
+	position:relative;
+	overflow: hidden;
+}
+/*.cz_mr li:hover{
+height: 280px;
+}*/
+.ns_mr li.active{
+	height: 270px;
+}
+/*.mz_mr li:hover dl{
+	top: 0;
+}*/
+.ns_mr ul li i{
+	border-radius: 15px;
+	border: 1px #FD1D5B  solid;
+	width: 30px;
+	color: #FD1D5B;
+	margin-right:15px ;
+}
+.ns_mr ul li a{
+	line-height: 40px;
+}
+.ns_mr ul li dl{
+	height: 160px;
+	position: absolute;
+}
+.ns_mr ul li dl img{
+	width:215px;
+	height: 130px;
+}
+.ns_mr ul li dl dd{
+	text-align: center;
+}
+/*----------男士下面品牌栏那一行-------*/
+.ns_b{
+	width: 1190px;
+	height:40px;
+	margin: auto;
+	margin-top:10px ;
+	border-bottom:1px #D0D0D0 solid ;
+	border-top:1px #D0D0D0 solid ;
+}
+.ns_b a{
+	display: block;
+	float: left;
+	margin: 0 21px;
+}
+/*-----------美体美化-----------*/
+.mt{
+	height: 550px;
+	width: 1190px;
+	margin: 0 auto;
+	margin-top: 30px;
+	
+}
+.mt .mt_t{
+	height: 40px;
+	border-bottom: 2px #02A3F0 solid;
+	margin-bottom:10px ;
+}
+.blue{
+	color: #02A3F0;
+}
+.mt .mt_m{
+	height: 490px;
+}
+.mt_mmr{
+	width: 612px;
+	float: left;
+   height: 490px;
+
+}
+.mt_mmr dl{
+	width: 200px;
+	height: 250px;
+	border: 1px #D0D0D0 solid;
+	float: left;
+	text-align: center;
+}
+.mt_mmr dl p{
+	font: 16px/1.5 "微软雅黑";
+	color: red;
+}
+.mt_mmr dl i{
+	font: 12px/1.5 "";
+}
+.mt_mml{
+	width: 310px;
+	height: 490px;
+	float:left;
+}
+.mt_mml img{
+	width: 310px;
+	height: 490px;
+}
+
+.mt_mr{
+	width: 220px;
+    float: right;
+  
+    height: 100%;
+}
+.mt_mr p{
+	font: bold 20px/45px "微软雅黑";
+	height: 45px;
+	text-align: center;
+	color: red;
+}
+.mt_mr ul li{
+	height: 40px;
+	border-bottom:1px #C7C7C7 solid ;
+	position:relative;
+	overflow: hidden;
+}
+/*.cz_mr li:hover{
+height: 280px;
+}*/
+.mt_mr li.active{
+	height: 270px;
+}
+/*.mz_mr li:hover dl{
+	top: 0;
+}*/
+.mt_mr ul li i{
+	border-radius: 15px;
+	border: 1px #FD1D5B  solid;
+	width: 30px;
+	color: #FD1D5B;
+	margin-right:15px ;
+}
+.mt_mr ul li a{
+	line-height: 40px;
+}
+.mt_mr ul li dl{
+	height: 160px;
+	position: absolute;
+}
+.mt_mr ul li dl img{
+	width:215px;
+	height: 130px;
+}
+.mt_mr ul li dl dd{
+	text-align: center;
+}
+/*----------彩妆下面品牌栏那一行-------*/
+.mt_b{
+	width: 1190px;
+	height:40px;
+	margin: auto;
+	margin-top:10px ;
+	border-bottom:1px #D0D0D0 solid ;
+	border-top:1px #D0D0D0 solid ;
+}
+.mt_b a{
+	display: block;
+	float: left;
+	margin: 0 21px;
+}
+/*----------美容美化和编辑推荐部分-------*/
+.news{
+	width: 1190px;
+	height: 485px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.news_l{
+	width: 740px;
+	height: 100%;
+	float:left;
+	padding: 0 30px;
+	border: 2px #D0D0D0 solid;
+	
+}
+.news_l .p1{
+	height:40px;
+	font:bold 18px/40px "微软雅黑";
+	color: #6666666;
+	border-bottom: 1px #D0D0D0 solid;
+}
+.news_l_l{
+	width: 250px;
+	height: 405px;
+	float: left;
+	margin-top:5px ;
+}
+.news_l_l img{
+	width: 240px;
+    height: 330px;
+}
+.news_l_l p{
+	font: bold 15px/1.5 "微软雅黑";
+	border: none;
+	color: #666666;
+}
+.news_l_r{
+	width: 480px;
+	height: 405px;
+	float: right;
+}
+.news_l_r img{
+	width: 160px;
+	height: 115px;
+}
+.news_l_r dl{
+	height: 115px;
+}
+.news_l_r dl dt{
+	float: left;
+	margin-right:15px ;
+}
+.news_l_r dl dd p{
+	margin: 10px 0;
+}
+.dlm{
+	margin: 20px 0;
+}
+.news_l_r dl dd i{
+	margin-right: 15px;
+}
+.news_l_r dl dd span{
+	font:bold 14px/1.5 "微软雅黑";
+	color: #000000;
+}
+.news_l_r dl dd  strong{
+	font: 12px/2 "微软雅黑";
+	color: #666666;
+	margin: 5px 15px;
+}
+.news_r{
+	width: 325px;
+	height: 100%;
+	float:right;
+	padding: 0 20px;
+	border: 2px #D0D0D0 solid;
+}
+.news_r .p2{
+	width: 100px;
+	height: 35px;
+	margin-top: 5px;
+	background:#FF0038 ;
+	font: 18px/35px "微软雅黑";
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+.news_r dl{
+	width: 325px;
+	height:95px ;
+	border-bottom:1px #D0D0D0 dotted ;
+	margin: 10px 0;
+}
+
+.news_r dl dt{
+	float: right;
+}
+.news_r dl dd{
+	height: 95px;
+	width: 230px;
+}
+.news_r dl dd p{
+	height: 30px;
+	font:bold 14px/30px "微软雅黑";
+	color: #161415;
+	overflow: hidden;
+}
+.news_r dl img{
+	width:80px;
+	height: 85px;
+
+}
+.news_r dl i{
+	margin-right: 10px;
+}
+.news_r dl dd a:hover{
+	color: red;
+	border-bottom: 1px red solid;
+}

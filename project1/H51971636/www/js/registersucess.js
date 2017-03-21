@@ -1,0 +1,1 @@
+//background:  url(../registersucessimg/reg-bg.png) no-repeat;

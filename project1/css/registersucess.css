@@ -1,0 +1,42 @@
+/*----------注册成功页面--------------------*/
+.rgesuc{
+	width: 980px;
+	height: 355px;
+	border: 1px #019ECF solid;
+	margin: 20px auto;
+}
+/*-------------利用滑动门技术进行做---------------*/
+ .regsuc_t{
+	width: 570px;
+	height: 60px;
+	margin: 50px auto;
+	background:  url(../registersucessimg/reg-bg.png) no-repeat -160px -240px;
+	clear: both;
+}
+.rgesuc p{
+	width: 570px;
+	text-align: center;
+	margin: 0 auto;
+	font: 12px/1.5 "微软雅黑";
+	color: #000000;
+}
+.blue{
+	color: #019ECF;
+}
+.wszl{
+	width: 170px;
+	height: 40px;
+	margin:30px auto ;
+	background: url(../registersucessimg/btn-regcom.png) ;
+}
+.regsuc_b{
+	width: 528px;
+	height: 30px;
+	margin: 0 auto;
+	background: url(../registersucessimg/reg-bg2.png) no-repeat left bottom;
+	padding-left: 80px;
+
+}
+.regsuc_b a{
+	margin-left: 30px;
+}

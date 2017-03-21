@@ -1,0 +1,196 @@
+/*----------注册页面部分-------------------------*/
+.register{
+	width: 980px;
+	height: 540px;
+	border:1px #02A3F0 solid;
+	margin: 10px auto;
+	overflow: hidden;
+	background:url(../registerimg/regbg.png)  no-repeat center center;
+	
+	
+}
+.register .register_l{
+	width: 48%;
+	height: 465px;
+	float: left;
+	
+	padding-top:50px ;
+}
+.register_l .dp{
+	width:400px;
+	height: 40px;
+	background-color:#e4e4e4 ;
+	background-image: url(../registerimg/dl.png);
+	background-repeat: no-repeat;
+	background-position:left center; 
+	border-bottom:3px #45cbfd solid;
+	margin-left: 20px;
+	font:bold 18px/40px "微软雅黑";
+	padding-left: 40px;
+	
+	
+}
+.dp i{
+	margin-left:15px ;
+}
+.blue{
+	color: #019ECF;
+}
+
+ .inputstyle{
+ 	width: 360px;
+ 	height: 25px;
+ 	margin: 20px auto;
+ }
+ .inputstyle span{
+ 	text-align: right;
+ 	width: 80px;
+ 	height:25px;
+ 	float:left;
+ 	margin-right:6px ;
+ }
+  .inputstyle input{
+  	width: 210px;
+  	height: 100%;
+  	border: 1px #02A3F0 solid;
+   float: left;
+  	
+  }
+  #yzm{
+  	width: 70px;
+  	height: 100%;
+  }
+ 
+ .ma{
+  	width: 50px;
+  	height: 25px;
+  	display: inline-block;
+   background: #019ECF;
+   font:bold 14px/25px "" ;
+   color: #fff;
+   text-align: center;
+  }
+  #dl{
+  	width: 90px;
+  	height: 30px;
+  	background: url(../registerimg/btn-login.png);
+  	text-align: center;
+    margin-top:30px;
+    margin-left: 200px;
+  }
+  .xstext{
+  	position: relative;
+   left: 150px;
+   top: -20px;
+   display: none;
+   
+  
+ }
+ .xstext.active{
+ 	display: block;
+ }
+ .res1{
+ 	margin-top:20px ;
+ 	height: 60px;
+ 	width: 100%;
+ 
+ }
+ .res{
+ 	height: 60px;
+ 	width: 100%;
+ 	
+ 	
+ 	
+ }
+ .res p{
+ 	margin-top:10px ;
+ }
+ .xstext.active{
+ 	display: block;
+ }
+  .hzdl{
+  	width: 260px;
+  	height: 70px;
+  	margin: 20px auto;
+  	
+  }
+  
+  #zfb{
+  	display: inline-block;
+  	width: 110px;
+  	height: 26px;
+  	background:url(../registerimg/union_alipay.jpg);
+  	position: relative;
+  	top: 10px;
+  
+  }
+   #tx{
+   	display: inline-block;
+  	width: 50px;
+  	height: 26px;
+  	background:url(../registerimg/union_qq.jpg);
+  	position: relative;
+  	top: 10px;
+  	margin: 0 5px;
+   }
+  
+  #qh{
+   display: inline-block;
+  	width: 58px;
+  	height: 26px;
+  	background:url(../registerimg/union_360.jpg);
+  	position: relative;
+  	top: 10px;
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+.register .register_r{
+	width: 48%;
+	height: 465px;
+	float: right;
+	
+	padding-top:50px 
+	
+}
+.register_r .zp{
+	width:400px;
+	height: 40px;
+	background-color:#e4e4e4 ;
+	background-image: url(../registerimg/zc.png);
+	background-repeat: no-repeat;
+	background-position:left center; 
+	border-bottom:3px #face32 solid;
+	margin-left: 20px;
+	margin-left: 20px;
+	font:bold 18px/40px "微软雅黑";
+	padding-left: 40px;
+}
+.zp i{
+	margin-left:15px ;
+}
+.yello{
+	color:#face32 ;
+}
+
+ #yzm2{
+  	width: 70px;
+  	height: 100%;
+  }
+  .xp{
+  	text-align: center;
+  	margin-top:10px ;
+  }
+ #zc{
+  	width: 90px;
+  	height: 30px;
+    background: url(../registerimg/btn-reg.png);
+  	text-align: center;
+    margin-top:15px;
+    margin-left: 200px;
+  }

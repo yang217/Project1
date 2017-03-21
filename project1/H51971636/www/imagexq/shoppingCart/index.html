@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box {
+				margin : 200px auto;	
+			}
+			.goodInfo {
+				width : 200px;
+				height : 300px;
+				text-align : center;
+				display : inline-block;
+			}
+			.goodInfo img {
+				width : 200px;
+				height : 250px;
+			}
+			#buy {
+				position : fixed;
+				right : 0;
+				top : 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="goodInfo" data-good-id="sp1">
+				<img src="img/1.jpg" class="goodImg"/>
+				<span class="goodName">香蕉</span>
+				<span class="goodPrice">30RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+			<div class="goodInfo" data-good-id="sp2">
+				<img src="img/2.jpg" class="goodImg"/>
+				<span class="goodName">苹果</span>
+				<span class="goodPrice">40RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+			<div class="goodInfo" data-good-id="sp3">
+				<img src="img/3.jpg" class="goodImg"/>
+				<span class="goodName">梨</span>
+				<span class="goodPrice">50RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+			<div class="goodInfo" data-good-id="sp4">
+				<img src="img/4.jpg" class="goodImg"/>
+				<span class="goodName">西瓜</span>
+				<span class="goodPrice">60RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+			<div class="goodInfo" data-good-id="sp5">
+				<img src="img/5.jpg" class="goodImg"/>
+				<span class="goodName">荔枝</span>
+				<span class="goodPrice">70RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+			<div class="goodInfo" data-good-id="sp6">
+				<img src="img/6.jpg" class="goodImg"/>
+				<span class="goodName">火龙果</span>
+				<span class="goodPrice">80RMB</span>
+				<input type="button" class="addToCart" value="加入购物车" />
+			</div>
+		</div>
+		<button id="buy">购物车(0)</button>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/fly.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/requestAnimationFrame.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function (){
+				$('#buy').click(function (){
+					window.location.href = "buy.html";
+				});
+				// 加载购物车中原有的信息
+				loadCart();
+				function loadCart(){
+					// 从cookie当中将所有商品的信息取出，
+					var cartStr = $.cookie("cart") ? $.cookie("cart") : "{}";
+					var cartObj = JSON.parse(cartStr);
+					var total = 0;
+					for(var goodId in cartObj){
+						total += cartObj[goodId].num;  // 获取所欲商品的数量的和
+					}
+					$('#buy').html("购物车(" + total + ")");
+				}
+				// 给加入购物车按钮添加点击事件
+				$('.addToCart').click(function (e){
+					// 获取商品信息
+					var goodId = $(this).parent().attr('data-good-id');
+					var goodName = $(this).siblings('.goodName').html();
+					var goodSrc = $(this).siblings('.goodImg').attr('src');
+					var goodPrice = $(this).siblings('.goodPrice').html();
+					goodPrice = parseFloat(goodPrice);
+					
+					// 可以设计自己格式的字符串用作cookie存储：  "sp1,香蕉,30,img/1.jpg,1:sp2,苹果,40,img/2.jpg,2"
+					/*
+					 * {
+					 * 	  "sp1" : {
+					 * 	      name : "香蕉",
+					 *        price : 30,
+					 *        src : "img/1.jpg",
+					 *        num : 1
+					 *    },
+					 *    "sp2" : {
+					 * 	      name : "苹果",
+					 *        price : 40,
+					 *        src : "img/2.jpg",
+					 *        num : 4
+					 *    },
+					 *    "sp3" : {
+					 * 	      name : "梨",
+					 *        price : 50,
+					 *        src : "img/3.jpg",
+					 *        num : 3
+					 *    },
+					 * }
+					 * 
+					 * 
+					 */
+					
+					// 从cookie当中将所有商品的信息取出，用于判断要加入购物车的商品是否已经存在, "cart"
+					var cartStr = $.cookie("cart") ? $.cookie("cart") : "{}";
+					var cartObj = JSON.parse(cartStr);
+					
+					// 判断商品是否已经在购物车中存在，如果已存在，直接数量加1， 否则将具体的商品信息存入
+					if(goodId in cartObj){
+						cartObj[goodId].num += 1;
+					} else {
+						cartObj[goodId] = {
+							name : goodName,
+							price : goodPrice,
+							src : goodSrc,
+							num : 1
+						};
+					}
+					
+					// 克隆一个图片
+					var cloneImg = $(this).siblings('.goodImg').clone();
+					// 改一下初始宽高
+					cloneImg.css({width:50,height:50});
+					cloneImg.fly({
+					    start:{
+					      left: e.clientX,  //开始位置（必填）#fly元素会被设置成position: fixed
+					      top: e.clientY,  //开始位置（必填）
+					    },
+					    end:{
+					      left: $('#buy').offset().left - $(window).scrollTop(), //结束位置（必填）
+					      top: $('#buy').offset().top - $(window).scrollTop(),  //结束位置（必填）
+					      width: 0, //结束时高度
+					      height: 0, //结束时高度
+					    },
+					    autoPlay: true, //是否直接运动,默认true
+					    onEnd: function(){
+					    	cloneImg.remove();
+					    	// 更新购物车按钮上的总数
+							var total = parseInt($('#buy').html().match(/\D*(\d+)\D*/)[1]);
+							$('#buy').html("购物车(" + (total + 1) + ")");
+					    } //结束回调
+					});
+					
+					// 更新cookie中购物车的信息
+					cartStr = JSON.stringify(cartObj);
+					$.cookie('cart', cartStr, {expires:0,path:"/"});
+				});
+			});
+		</script>
+	</body>
+</html>

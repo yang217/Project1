@@ -1,0 +1,218 @@
+htlm,body,ul.dl.ol,h1,h2,p,fieldset,legend,img{margin:0; padding:0;}
+ul li{list-style:none;}
+a{text-decoration:none; color:#666666;}
+body{font:14px/1.5 "微软雅黑"; color:#666666;}
+.layout{
+	width: 950px;
+	margin: 0 auto;
+}
+
+/*------购物车head部分-----*/
+.head{
+	width: 950px;
+	height: 75px;
+	margin: 0 auto;
+	
+}
+.head .head_l{
+	width: 20%;
+	float: left;
+	background:url(../goshopimg/cart-icon.png) no-repeat left center ;
+	height: 100%;
+}
+.head ul{
+	height: 100%;
+	float: right;
+	text-align: center;
+}
+.head ul li{
+	float: left;
+	border-right: 1px #666666 solid;
+	margin-right: 5px;
+	margin-top:30px ;
+	
+	
+}
+.head ul li a{
+	color: #666666;
+}
+.head ul li a:hover{
+	color: #000000;
+	text-decoration: underline;
+}
+/*------------商品列表部分--------------*/
+.goodlist{
+	width: 950px;
+	border: 1px #666666 solid;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 0;
+}
+.goodlist ul{
+	height: 30px;
+	width: 950px;
+}
+
+.goodlist .firstul{
+	background:#b7dff7 ;
+}
+.goodlist ul li{
+	float: left;
+	width: 80px;
+	font: 12px/30px "";
+	color: #000000;
+	border-bottom: 1px #D0D0D0 dotted;
+}
+.goodlist ul .sencondli{
+	width: 300px;
+}
+.pri{
+	font:bold 16px/1.5 "微软雅黑";
+	color: #000000;
+	text-align:right ;
+	width: 950px;
+	margin: 0 auto;
+	text-align: right;
+	}
+.pri i{
+	font:bold 14px/1.5 "微软雅黑";
+	color:red;
+}
+ul li img {
+				width : 30px;
+				height : 30px;
+				vertical-align: middle;
+			}
+			
+.goodcount input{
+	width: 30px;
+	height: 20px;
+	text-align: center;
+}
+.goodlist a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+/*---------------促销信息部分------------------*/
+.cxxx{
+	width: 950px;
+	height: 45px;
+	border: 1px #FB8502 solid;
+	margin: 20px auto;
+	background: url(../goshopimg/salesp-bg.png) no-repeat left top;
+}
+.cxxx ul li{
+	float: left;
+	background:url(../goshopimg/disc.gif) no-repeat left center ;
+	margin-left: 50px;
+	padding-left:5px ;
+}
+
+.cxxx ul li a{
+	color: red;
+}
+
+.cxxx ul li a:hover{
+	text-decoration: underline;
+}
+.cxxx_b{
+	width: 950px;
+	height: 65px;
+	margin: 0 auto;
+	
+}
+
+.cxxx_b .cxxx_bl {
+	width: 40%;
+	height: 100%;
+	float: left;
+margin-top:18px ;
+}
+
+.cxxx_b .cxxx_br{
+	width: 35%;
+	height: 100%;
+	float: right;
+
+}
+.cxxx_br .a1{
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+	background:url(../goshopimg/icon-dle.png) no-repeat left 5px ;
+	padding-left:15px ;
+	position: relative;
+	top: -5px;
+	
+	
+}
+.cxxx_br .a2{
+	width: 100px;
+	height: 45px;
+	display: inline-block;
+	background:url(../goshopimg/btn-go-on.png) no-repeat left 18px ;	
+}
+.cxxx_br .a3{
+	width: 105px;
+	height: 45px;
+	display: inline-block;
+	background:url(../goshopimg/btn-go-sett.png) no-repeat left 18px ;	
+}
+
+
+
+/*-----------------超值优惠区---------------------*/
+.czyh{
+	width: 950px;
+	height: 480px;
+	margin: 20px auto;
+	border: 2px #019ECF solid;
+	overflow: hidden;
+}
+.czyh .til{
+	height: 30px;
+	background: url(../goshopimg/sa-bg1.png);
+}
+.czyh .box{
+	width: 280px;
+	
+	border: 1px #BEBEBE solid;
+	float: left;
+	margin: 10px 15px;
+
+}
+ .box .til{
+	height: 30px;
+	background:#e3e3e3;
+	font: 16px/30px "微软雅黑";
+	color: #019ECF; 
+	text-align: center;
+	margin-bottom:10px ;
+	
+}
+.box a{
+	font: 12px/2 "微软雅黑";
+	color: #000000;
+}
+.box a:hover{
+	color:#FB8502; 
+	text-decoration: underline;
+	
+}
+.yello{
+	color: #FB8502;
+}
+.box .jg{
+	width: 90px;
+	height: 30px;
+	display: inline-block;
+	background: url(../goshopimg/btn-sp-add.png);
+	margin-top:20px ;
+	margin-left:30px ;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin : 0; padding : 0;}
+			#goodList {
+				width : 1200px;
+				border : 1px solid black;
+				border-bottom : none;
+				margin : 100px auto;
+			}
+			ul {
+				list-style : none;
+				width : 1200px;
+				height : 50px;
+				border-bottom : 1px solid black;
+			}
+			ul li {
+				width : 200px;
+				height : 50px;
+				float : left;
+				text-align : center;
+				line-height : 50px;
+			}
+			ul li img {
+				width : 30px;
+				height : 30px;
+				vertical-align: middle;
+			}
+			ul li.goodNum input {
+				width : 50px;
+				text-align : center;
+				vertical-align: middle;
+			}
+			ul li.goodNum a{
+				display : inline-block;
+				width : 19px;
+				height : 19px;
+				background : #CCC;
+				text-decoration: none;
+				color : #000;
+				line-height : 19px;
+				vertical-align: middle;
+			}
+			#blank {
+				width : 1200px;
+				height : 50px;
+				font : 24px/50px "楷体";
+				border-bottom : 1px solid black;
+				text-align : center;
+				display : none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="goodList">
+			<ul>
+				<li>缩略图</li>
+				<li>品名</li>
+				<li>价格</li>
+				<li>数量</li>
+				<li>小计</li>
+				<li>操作</li>
+			</ul>
+			<!--
+			<ul class="goodInfo" data-good-id="sp1">
+				<li class="goodImg"><img src="img/1.jpg"/></li>
+				<li class="goodName">香蕉</li>
+				<li class="goodPrice">30</li>
+				<li class="goodNum">
+					<a href="javascript:;" class="minus">-</a>
+					<input type="text" class="numInp" value="2" />
+					<a href="javascript:;" class="plus">+</a>
+				</li>
+				<li>60</li>
+				<li><a href="javascript:;">删除</a></li>
+			</ul>-->
+			<div id="blank">您的购物车空空如也~~</div>
+		</div>
+		<button id="goShopping">继续购物</button>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function (){
+				$('#goShopping').click(function (){
+					window.location.href = "index.html";
+				});
+				// 取出商品信息
+				var cartStr = $.cookie('cart') ? $.cookie('cart') : "{}";
+				if(cartStr == "{}"){
+					$('#blank').css({display:"block"});
+				} else {
+					$('#blank').css({display:"none"});
+					// 将购物车字符串转为对象，方便操作
+					var cartObj = JSON.parse(cartStr);
+					// 遍历商品的信息，在购物车列表中展示出来
+					for(var id in cartObj){
+						var info = cartObj[id];
+						$('<ul class="goodInfo" data-good-id="' + id + '">' +
+							'<li class="goodImg"><img src="' + info.src + '"/></li>' + 
+							'<li class="goodName">' + info.name + '</li>' +
+							'<li class="goodPrice">' + info.price + '</li>' +
+							'<li class="goodNum">' +
+								'<a href="javascript:;" class="minus">-</a>' +
+								'<input type="text" class="numInp" value="' + info.num + '" />' +
+								'<a href="javascript:;" class="plus">+</a>' +
+							'</li>' +
+							'<li class="all">' + info.num * info.price + '</li>' +
+							'<li><a href="javascript:;" class="remove">删除</a></li>' +
+						'</ul>').appendTo("#goodList");
+					}
+					
+					// 加各类事件
+					$('.numInp').blur(function (){
+						// 获取商品的id
+						var goodId = $(this).parents('ul').attr('data-good-id');
+						var num = $(this).val(); // 数量输入框失去焦点时，获得输入框中的内容
+						// 做一个用户输入的校验，如果输入的不是整数的话，直接改为1
+						var REG_NUM = /^\d+$/;
+						if(REG_NUM.test(num)){
+							num = parseInt(num);
+						} else {
+							num = 1;
+						}
+						$(this).val(num);
+						// 更新一下小计
+						var price = parseFloat($(this).parent().siblings('.goodPrice').html());
+						$(this).parent().siblings('.all').html(num * price);
+						// 将商品数量存回cookie
+						// 获取cookie中商品的信息，将其中cookie中删除
+						var cartStr = $.cookie('cart') ? $.cookie('cart') : "{}";
+						var cartObj = JSON.parse(cartStr);
+						cartObj[goodId].num = num;
+						$.cookie('cart', JSON.stringify(cartObj), {expires:7,path:"/"});
+					});
+					$('.remove').click(function (){
+						// 获取商品的id
+						var goodId = $(this).parents('ul').remove().attr('data-good-id');
+						// 获取cookie中商品的信息，将其中cookie中删除
+						var cartStr = $.cookie('cart') ? $.cookie('cart') : "{}";
+						var cartObj = JSON.parse(cartStr);
+						delete cartObj[goodId]; // 从对象中删除
+						// 将新的信息存回cookie
+						var cartStr = JSON.stringify(cartObj); // {}
+						$.cookie('cart', cartStr, {expires:7,path:"/"});
+						// 判断一下是不是已经全删除了，是的话显示一下空空如也
+						if(cartStr == "{}"){
+							$('#blank').css({display:"block"});
+						}
+						
+					});
+					$('.minus').click(function (){// 点击商品数量减1
+						// 获取商品的id
+						var goodId = $(this).parents('ul').attr('data-good-id');
+						// 获取该商品的数量
+						var num = parseInt($(this).siblings('.numInp').val());
+						num--;
+						// 商品数量不能小于1
+						if(num < 1){
+							num = 1;
+						}
+						// 更新输入框中的值
+						$(this).siblings('.numInp').val(num);
+						// 调整小计
+						var price = parseFloat($(this).parent().siblings('.goodPrice').html());
+						$(this).parent().siblings('.all').html(num * price);
+						// 操作cookie的商品信息
+						var cartStr = $.cookie('cart') ? $.cookie('cart') : "{}";
+						var cartObj = JSON.parse(cartStr);
+						cartObj[goodId].num = num; // 更新商品数量
+						// 从新存回cookie
+						$.cookie('cart', JSON.stringify(cartObj), {expires:7, path:"/"}); 
+					});
+					$('.plus').click(function (){ // 点击商品数量加1
+						// 获取商品的id
+						var goodId = $(this).parents('ul').attr('data-good-id');
+						// 获取该商品的数量
+						var num = parseInt($(this).siblings('.numInp').val());
+						num++
+						// 更新输入框中的值
+						$(this).siblings('.numInp').val(num);
+						// 调整小计
+						var price = parseFloat($(this).parent().siblings('.goodPrice').html());
+						$(this).parent().siblings('.all').html(num * price);
+						// 操作cookie的商品信息
+						var cartStr = $.cookie('cart') ? $.cookie('cart') : "{}";
+						var cartObj = JSON.parse(cartStr);
+						cartObj[goodId].num = num; // 更新商品数量
+						// 从新存回cookie
+						$.cookie('cart', JSON.stringify(cartObj), {expires:7, path:"/"}); 
+					});
+					
+				}
+			});
+		</script>
+	</body>
+</html>

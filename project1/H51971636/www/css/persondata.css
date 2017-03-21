@@ -1,0 +1,142 @@
+/*-----------------个人资料页面---------------------*/
+.persondata{
+	width: 980px;
+	height: 510px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top:20px ;
+}
+.persondata .persondata_l{
+	width: 155px;
+	height: 500px;
+	border: 1px #AEAEBE solid;
+	border-bottom-left-radius:15px ;
+	border-top-left-radius:15px ;
+	background: url(../persondataimg/myzh.png) no-repeat left top;
+	padding-top: 30px;
+	float: left;
+	
+	
+}
+.persondata_l .til{
+	width: 140px;
+	height: 35px;
+	text-align: left;
+	font: bold 16px/35px "";
+	color: #000000;
+	border: 1px #fad29c solid;
+	background: #fdf3d5;
+	margin: 15px auto;
+}
+.persondata_l ul {
+	width: 120px;
+	margin: 0 auto;
+}
+.persondata_l a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+.persondata_l ul li{
+	padding-left: 15px;
+	background: url(../persondataimg/acc-nav-ico.png) no-repeat left;
+	font: 14px/1.5 "微软雅黑";
+	color: #000000;
+}
+
+.persondata  .persondata_r{
+	width: 810px;
+	height:510px;
+    float: right;
+}
+.persondata_r .til{
+	height: 32px;
+	border: 2px #02A3F0 solid;
+	text-align: center;
+	font: 14px/32px "微软雅黑";
+	color: #000000;
+	background: #f2f2f2;
+	-webkit-border-top-right-radius:15px ;
+	margin-bottom: 25px;
+}
+.persondata_r .zl{
+	margin-bottom:20px ;
+	overflow: hidden;/*避免高度塌陷*/
+	
+}
+.persondata_r .zl span{
+	float: left;
+	text-align: right;
+	width: 70px;
+}
+.persondata_r .zl .inputstyle {
+	width: 210px;
+	height: 22px;
+	border-top: 1px #000000 solid;
+	background:#fcfcfc ;
+	float: left;
+}
+.persondata_r .zl  .xstext{
+	height: 22px;
+	padding-left:5px ;
+	background: url(../persondataimg/gth.gif) no-repeat left center  ;
+	background-color: #ffe599;
+	float: left;
+	display: none;
+}
+.persondata_r .zl  .xstext.active{
+	display: block;
+}
+
+.persondata_r  .zl select{
+	float: left;
+	height: 22px;
+}
+.persondata_r  .dz{
+	width: 730px;
+	height: 130px;
+	border: 2px #AEAEBE solid;
+	padding-top: 15px;
+}
+.persondata_r .city{
+	margin-bottom:10px ;
+	overflow: hidden;/*避免高度塌陷*/
+}
+.persondata_r .city span{
+	text-align: right;
+	display: inline-block;
+	margin-left: 28px;
+}
+.ts{
+	font: 12px/0.5 "";
+	margin-bottom:12px ;
+	margin-left: 28px;
+}
+.tj{
+margin-bottom:10px ;
+	overflow: hidden;
+	margin-top:15px ;
+}
+.tj span{
+	text-align: right;
+	display: inline-block;
+	margin-left: 28px;
+}
+
+#xg{
+	width: 90px;
+	height: 30px;
+	background:url(../persondataimg/change.png);
+	margin: 0 auto;
+	float:left;
+	margin-left: 250px;
+	margin-right: 20px;
+}
+#cz{
+	width: 90px;
+	height: 30px;
+	background: url(../persondataimg/btn-refill.png);
+	margin: 0 auto;
+	float: left;
+	
+}

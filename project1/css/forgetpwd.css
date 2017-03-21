@@ -1,0 +1,71 @@
+.forgetpwd{
+	width: 980px;
+	height: 200px;
+	margin: 0 auto;
+	border: 1px #02A3F0 solid;
+	margin-top: 20px;
+}
+.forgetpwd .til{
+	width: 800px;
+	height: 30px;
+	margin: 0 auto;
+	background: #efefef;
+	font: 12px/30px "微软雅黑";
+	color: #000000;
+	text-align: center;
+	border-bottom:1px #D0D0D0 solid ;
+	margin-top:15px ;
+	
+}
+.forgetpwd .res{
+	width:320px;
+    height: 30px;
+    margin: 20px auto;
+}
+.forgetpwd span{
+	float: left;
+	text-align: left;
+}
+.forgetpwd .inputstyle{
+	width: 200px;
+	height: 20px;
+	float: left;
+}
+.forgetpwd .yzm{
+	width: 50px;
+	height: 20px;
+	float: left;
+	border: 1px #0000FF solid;
+	background: #019ECF;
+	color: #fff;
+	font-weight:bold ;
+	text-align: center;
+}
+.forgetpwd  .res i{
+	display: none;
+}
+#yzm{
+	width:100px ;
+	height: 20px;
+	float: left;
+}
+#xyb{
+	float: left;
+	width: 50px;
+	height: 20px;
+	background: #b6e3f6;
+	border:1px #02A3F0 solid ;
+	border-radius: 5px;
+	margin-left: 450px;
+   margin-right: 30px;
+	
+}
+#syb{
+	float: left;
+	width: 80px;
+	height: 20px;
+	background: #b6e3f6;
+	border:1px #02A3F0 solid ;
+	border-radius: 5px;
+	
+}

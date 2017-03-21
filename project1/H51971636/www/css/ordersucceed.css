@@ -1,0 +1,21 @@
+/*----------------结算中心------------------------*/
+.accoutcenter{ /*---这个高度是自适应---*/
+	width: 980px;
+	margin: 0 auto;
+	border: 1px #BEBEBE solid;
+	margin-top:20px ;
+}
+.accoutcenter p{
+	text-align: center;
+	margin-bottom: 20px;
+	font: 12px/1.5 "微软雅黑";
+	color: #6666666;
+}
+.accoutcenter .til{
+	width: 400px;
+	height: 100px;
+	margin: 0 auto;
+	background: url(../ordersucceedimg/alipay.gif) no-repeat right center;
+	margin-top: 30px;
+
+}

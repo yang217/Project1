@@ -1,0 +1,46 @@
+.helpcenter{
+	width: 980px;
+	height: 770px;
+	margin: 0 auto;
+	overflow: hidden;
+	border: 1px #AEAEBE solid;
+}
+.helpcenter .helpcenter_l{
+	width: 163px;
+	height: 100%;
+	float: left;
+	padding-left:7px ;
+}
+.helpcenter_l .til{
+	margin-top: 15px;
+	background: #e1f4fd;
+	color: #0b62c1;
+	height: 25px;
+	width: 125px;
+	padding-left: 15px;
+	font: 14px/25px "微软雅黑";
+	color: blue;
+}
+.helpcenter_l a:hover{
+	color: #FB8502;
+}
+.helpcenter_l ul li{
+	padding-left: 15px;
+}
+.helpcenter_l ul li a{
+	font: 12px/1.5"";
+	
+}
+.helpcenter_l ul li a:hover{
+	font-weight: bold;
+	color: #000000;
+}
+.helpcenter .helpcenter_r{
+	width:730px;
+	height: 275px;
+	float: right;
+	margin-right: 55px;
+	margin-top:5px ;
+	
+	
+}

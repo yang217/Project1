@@ -1,0 +1,99 @@
+/*---------------正在进行的活动---------------*/
+
+.activity  .being{
+	overflow: hidden;
+	background: #f3f3f3;
+	padding-top: 30px;
+}
+ .activity .actil{
+  font:bold 18px/2 "";
+  color: #000000;
+}
+.activity .actil i{
+	color:#C7C7C7;
+	margin-left:6px ;
+}
+.activity  dl:hover{
+	border-bottom: 2px red solid;
+}
+.activity  dl{
+	margin-top:20px ;
+	float: left;
+	width: 575px;
+	height: 390px;
+	margin-right: 20px;
+	border-bottom: 2px #bebebe solid;
+	background: #fff;
+	position: relative;
+}
+ .activity  dl dd{
+	padding-left:25px ;
+}
+.activity img{
+	width: 575px;
+	height: 305px;
+}
+.activity   dl .a1{
+	float: left;
+	font:bold 14px/1.5 "";
+	margin-top: 15px;
+}
+ .activity  dl .a2{
+	width: 25px;
+	height: 25px;
+	background: url(../activityimg/like.jpg) no-repeat;
+	margin-top: 15px;
+	
+	float: right;
+	margin-right: 30px;
+	
+}
+ .activity dl .a3{
+	width: 25px;
+	height: 25px;
+	background: url(../activityimg/share.jpg) no-repeat;
+	margin-top: 15px;
+	float: right;
+	margin-right: 12px;
+}
+ .activity dl .a4{
+	font:bold 14px/1.5 '';
+	color: #FF0000;
+	margin-top: 45px;
+	margin-left: -88px;
+	float: left;
+}
+ .activity dl .bxs{
+	float: right;
+	margin-top: 45px;
+   position: relative;
+   left: 65px;
+  
+}
+.activity   dl .bxs i{
+	color:red;
+}
+.activity   .end{
+		overflow: hidden;
+	background: #f3f3f3;
+	padding-top: 30px;
+}
+ .activity  dl .mask{
+	width: 575px;
+	height: 390px;
+	filter:alpha(opacity=50);
+	opacity: 0.8;
+	background: #BEBEBE;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font:30px/390px "微软雅黑";
+	color: #fff;
+	text-align: center;
+    display: none;
+	
+}
+.activity   dl .mask.active{
+	display: block;
+	
+}
